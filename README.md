@@ -4,7 +4,7 @@
 
 ---
 
-##TODOs
+## TODOs
 
  - :white_square_button: Basic timer for single API call
  - :white_square_button: Basic timer for multiple API call
