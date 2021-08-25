@@ -1,8 +1,7 @@
 use std::env;
 
 use env_logger;
-use log::{info};
-use std::env::VarError;
+use log::info;
 
 const RUST_LOG_KEY: &'static str = "RUST_LOG";
 
