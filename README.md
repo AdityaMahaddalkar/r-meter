@@ -14,7 +14,7 @@
 
 ## TODOs
 
-- :white_square_button: Basic timer for single API call
+- :heavy_check_mark: Basic timer for single API call
 - :white_square_button: Basic timer for multiple API call
 - :white_square_button: Mean, StdDev, Max, Min times for multiple API calls
 - :white_square_button: Report generation
