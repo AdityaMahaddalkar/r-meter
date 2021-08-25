@@ -1,15 +1,18 @@
-mod logging;
+use crate::executor::arg_parser::arg_parser::parse_args;
+use crate::executor::args_executor::args_executor::main_executor;
 
-use std::env;
-use log::{info};
+mod logging;
+mod metrics;
+mod executor;
 
 fn init() {
     logging::log_initializer::log_init();
 }
 
-#[tokio::main]
-async fn main() {
+
+fn main() {
     init();
 
-    info!("Hello, world!");
+    let arguments = parse_args();
+    main_executor(arguments);
 }
