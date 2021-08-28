@@ -13,6 +13,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [x86_64-pc-windows-gnu, x86_64-unknown-linux-musl]
 
     steps:
     - uses: actions/checkout@v2
@@ -23,6 +28,6 @@ jobs:
     - name: Rust Release binary
       uses: rust-build/rust-build.action@v1.0.3
       with:
-        RUSTTARGET: x86_64-pc-windows-gnu
+        RUSTTARGET: ${{ matrix.target }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
