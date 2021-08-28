@@ -59,9 +59,11 @@ mod tests {
     use crate::metrics::aggregator_timer::aggregator_timer::multiple_api_calls_aggregation;
     use crate::models::http_methods::methods::Methods;
 
+    const URI_TO_QUERY: &'static str = "http://reddit.com";
+
     #[test]
     fn test_multiple_get_calls() {
-        let uri = String::from("http://localhost");
+        let uri = String::from(URI_TO_QUERY);
         let method = Methods::GET;
         let count_of_calls = 100;
         let _ = multiple_api_calls_aggregation(&uri, &method, &None, &count_of_calls);
@@ -69,7 +71,7 @@ mod tests {
 
     #[test]
     fn test_multiple_post_calls() {
-        let uri = String::from("http://localhost");
+        let uri = String::from(URI_TO_QUERY);
         let method = Methods::POST;
         let count_of_calls = 100;
         let body = Vec::from(Body::from("Hello World").as_bytes().unwrap());
@@ -78,7 +80,7 @@ mod tests {
 
     #[test]
     fn test_multiple_delete_calls() {
-        let uri = String::from("http://localhost");
+        let uri = String::from(URI_TO_QUERY);
         let method = Methods::DELETE;
         let count_of_calls = 100;
         let _ = multiple_api_calls_aggregation(&uri, &method, &None, &count_of_calls);
@@ -86,7 +88,7 @@ mod tests {
 
     #[test]
     fn test_multiple_put_calls() {
-        let uri = String::from("http://localhost");
+        let uri = String::from(URI_TO_QUERY);
         let method = Methods::PUT;
         let count_of_calls = 100;
         let _ = multiple_api_calls_aggregation(&uri, &method, &None, &count_of_calls);

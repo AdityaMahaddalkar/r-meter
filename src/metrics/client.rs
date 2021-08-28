@@ -35,28 +35,30 @@ mod tests {
     use crate::metrics::client::client::call_uri_with_method;
     use crate::models::http_methods::methods::Methods;
 
+    const URI_TO_QUERY: &'static str = "http://reddit.com/";
+
     #[test]
     fn test_call_get_once() {
-        let valid_uri = String::from("http://reddit.com/");
+        let valid_uri = String::from(URI_TO_QUERY);
         call_uri_with_method(&valid_uri, &Methods::GET, &None);
     }
 
     #[test]
     fn test_call_post_once() {
         let body = Vec::from(Body::from("Hello world").as_bytes().unwrap());
-        let valid_uri = String::from("http://reddit.com/");
+        let valid_uri = String::from(URI_TO_QUERY);
         call_uri_with_method(&valid_uri, &Methods::POST, &Some(body));
     }
 
     #[test]
     fn test_call_delete_once() {
-        let valid_uri = String::from("http://reddit.com/");
+        let valid_uri = String::from(URI_TO_QUERY);
         call_uri_with_method(&valid_uri, &Methods::DELETE, &None);
     }
 
     #[test]
     fn test_call_put_once() {
-        let valid_uri = String::from("http://reddit.com/");
+        let valid_uri = String::from(URI_TO_QUERY);
         call_uri_with_method(&valid_uri, &Methods::PUT, &None);
     }
 }

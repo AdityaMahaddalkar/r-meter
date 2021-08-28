@@ -29,10 +29,12 @@ mod tests {
     use crate::executor::args_executor::args_executor::main_executor;
     use crate::models::http_methods::methods::Methods;
 
+    const URI_TO_QUERY: &'static str = "http://reddit.com";
+
     #[test]
     fn test_get_call_valid_uri() {
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: None,
             method: Methods::GET,
             data: None,
@@ -44,7 +46,7 @@ mod tests {
     fn test_post_call_valid_uri() {
         let body = Option::Some(Vec::from(Body::from("Hello World").as_bytes().unwrap()));
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: None,
             method: Methods::POST,
             data: body,
@@ -55,7 +57,7 @@ mod tests {
     #[test]
     fn test_delete_call_valid_uri() {
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: None,
             method: Methods::DELETE,
             data: None,
@@ -66,7 +68,7 @@ mod tests {
     #[test]
     fn test_put_call_valid_uri() {
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: None,
             method: Methods::PUT,
             data: None,
@@ -77,7 +79,7 @@ mod tests {
     #[test]
     fn test_for_multiple_get_calls_valid_uri() {
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: Some(300),
             method: Methods::GET,
             data: None,
@@ -89,7 +91,7 @@ mod tests {
     fn test_for_multiple_post_calls_valid_uri() {
         let body = Option::Some(Vec::from(Body::from("Hello World").as_bytes().unwrap()));
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: Some(300),
             method: Methods::POST,
             data: body,
@@ -100,7 +102,7 @@ mod tests {
     #[test]
     fn test_for_multiple_delete_calls_valid_uri() {
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: Some(300),
             method: Methods::DELETE,
             data: None,
@@ -111,7 +113,7 @@ mod tests {
     #[test]
     fn test_for_multiple_put_calls_valid_uri() {
         let arguments = Arguments {
-            uri: String::from("http://localhost"),
+            uri: String::from(URI_TO_QUERY),
             count: Some(300),
             method: Methods::PUT,
             data: None,
