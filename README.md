@@ -20,6 +20,6 @@
 - :heavy_check_mark: Basic timer for single API call
 - :heavy_check_mark: Basic timer for multiple API call
 - :heavy_check_mark: Mean, Max, Min times for multiple API calls
-- :white_square_button: Support for POST, PUT, DELETE calls
+- :heavy_check_mark: Support for POST, PUT, DELETE calls
 - :white_square_button: Report generation
 - :white_square_button: Graphical UI
