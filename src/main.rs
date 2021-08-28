@@ -4,15 +4,13 @@ use crate::executor::args_executor::args_executor::main_executor;
 mod logging;
 mod metrics;
 mod executor;
-
-fn init() {
-    logging::log_initializer::log_init();
-}
+mod models;
 
 
 fn main() {
-    init();
+    logging::log_initializer::log_init();
 
     let arguments = parse_args();
-    main_executor(arguments);
+    main_executor(&arguments);
 }
+
