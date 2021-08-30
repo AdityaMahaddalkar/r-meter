@@ -7,11 +7,11 @@
 ## Usage
 
 - Single API GET call
-    - ``r-meter.exe -u "<valid_uri>"``
-    - ``r-meter.exe --uri "<valid_uri"``
+    - ``r-meter.exe -u "<valid_uri>" -m (GET|POST|DELETE|PUT)``
+    - ``r-meter.exe --uri "<valid_uri" --method (GET|POST|DELETE|PUT)``
 - Multiple API GET calls
-    - ``r-meter.exe -u "<valid_uri>" -m -c <count_of_calls>``
-    - ``r-meter.exe -uri "<valid_uri>" --multi --count <count_of_calls>``
+    - ``r-meter.exe -u "<valid_uri>" -m (GET|POST|DELETE|PUT) -c <count_of_calls>``
+    - ``r-meter.exe -uri "<valid_uri>" --method (GET|POST|DELETE|PUT) --count <count_of_calls>``
 
 ---
 
